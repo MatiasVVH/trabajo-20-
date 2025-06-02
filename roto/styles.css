@@ -11,56 +11,13 @@ color: #212121;
 }
 
 header {
-  background-color: #0d47a1; /* Azul fuerte */
+  background-color: #0d47a1; 
 color: white;
 padding: 15px 20px;
 text-align: center;
 }
 
-.contenedor-principal {
-display: flex;
-flex-wrap: wrap;
-min-height: 100vh;
-}
 
-/* SIDEBAR */
-.sidebar {
-flex: 1 1 200px;
-background-color: #263238;
-padding: 20px;
-}
-
-.sidebar nav ul {
-list-style: none;
-}
-
-.sidebar nav li {
-margin: 15px 0;
-}
-
-.sidebar nav a {
-text-decoration: none;
-color: white;
-font-weight: bold;
-transition: color 0.3s;
-}
-
-.sidebar nav a:hover {
-color: #ffd54f;
-}
-
-/* CONTENIDO */
-.contenido {
-flex: 4 1 600px;
-padding: 30px;
-}
-
-/* GALERIA */
-.galeria {
-display: flex;
-flex-wrap: wrap;
-gap: 20px;
-}
 
 .tarjeta {
 flex: 1 1 calc(33% - 20px);
@@ -75,29 +32,29 @@ transition: transform 0.3s;
 transform: scale(1.05);
 }
 
-/* Clubes - Colores temáticos */
+
 .arsenal {
-  background-color: #d32f2f; /* rojo arsenal */
+  background-color: #d32f2f; 
 color: white;
 }
 .barcelona {
-  background-color: #3f51b5; /* azul barça */
+  background-color: #3f51b5; 
 color: white;
 }
 .inter {
-  background-color: #1a237e; /* azul oscuro inter */
+  background-color: #1a237e; 
 color: white;
 }
 .chile {
-  background-color: #b71c1c; /* rojo chile */
+  background-color: #b71c1c;
 color: white;
 }
 .colo-colo {
-  background-color: #eeeeee; /* blanco/gris claro */
+  background-color: #eeeeee; 
 color: #212121;
 }
 .marsella {
-  background-color: #81d4fa; /* celeste marsella */
+  background-color: #81d4fa;
 color: #00334d;
 }
 
