@@ -1,80 +1,125 @@
+
 * {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 
 body {
-font-family: 'Segoe UI', sans-serif;
-background-color: #f1f1f1;
-color: #212121;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f1f1f1;
+  color: #212121;
 }
+
 
 header {
-  background-color: #0d47a1; 
-color: white;
-padding: 15px 20px;
-text-align: center;
+  background-color: #1799da;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
+header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+
+
+.contenedor-principal {
+  display: flex;
+  height: 600px;
+}
+
+
+
+.sidebar {
+  background-color: #ffffff;
+  padding: 20px;
+  flex: 1;
+  border-right: 2px solid #e0e0e0;
+}                            
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #0d47a1;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.sidebar a:hover {
+  color: #1976d2;
+}
+
+
+.contenido {
+  flex: 3;
+  padding: 20px;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
 
 .tarjeta {
-flex: 1 1 calc(33% - 20px);
-background-color: white;
-border-radius: 10px;
-padding: 20px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-transition: transform 0.3s;
+  width: 30%;
+  min-width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px ;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .tarjeta:hover {
-transform: scale(1.05);
+  transform: scale(1.05) ;
+  box-shadow: 0 8px 20px ;
 }
 
 
 .arsenal {
-  background-color: #d32f2f; 
-color: white;
+  background-color: #d32f2f;
+  color: white;
 }
 .barcelona {
-  background-color: #3f51b5; 
-color: white;
+  background-color: #3f51b5;
+  color: white;
 }
 .inter {
-  background-color: #1a237e; 
-color: white;
+  background-color: #1a237e;
+  color: white;
 }
 .chile {
   background-color: #b71c1c;
-color: white;
+  color: white;
 }
 .colo-colo {
-  background-color: #eeeeee; 
-color: #212121;
+  background-color: #eeeeee;
+  color: #212121;
 }
 .marsella {
   background-color: #81d4fa;
-color: #00334d;
+  color: #00334d;
 }
 
-/* Responsivo */
-@media (max-width: 900px) {
-.tarjeta {
-    flex: 1 1 calc(50% - 20px);
-}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #0d47a1;
+  color: white;
 }
 
-@media (max-width: 600px) {
-.contenedor-principal {
-    flex-direction: column;
-}
-
-.sidebar {
-    flex: 1 1 100%;
-}
-
-.tarjeta {
-    flex: 1 1 100%;
-}
-}
