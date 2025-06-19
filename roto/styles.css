@@ -37,6 +37,7 @@ footer {
   background-color: #0D47A1; /* azul profundo */
   color: white;
   padding: 20px;
+  
 }
 
 .sidebar nav ul {
@@ -109,7 +110,6 @@ section {
 .imagenes img {
   width: 48%;
   border-radius: 8px;
-  object-fit: cover;
 }
 
 /* Colores específicos */

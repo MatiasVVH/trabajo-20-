@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Seguidores con velocidad real</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: #fafafa;
+      cursor: crosshair;
+    }
+
+    .seguidor {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      will-change: transform;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  let mouseX = 0;
+  let mouseY = 0;
+
+  const imagenes = [
+    "img/santos.jpg",
+    "img/Giarellak.png",
+    "img/matii (2).png"
+  ];
+
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  document.addEventListener("click", () => {
+    const img = document.createElement("img");
+
+    // Imagen aleatoria
+    img.src = imagenes[Math.floor(Math.random() * imagenes.length)];
+    img.className = "seguidor";
+
+    // Tamaño aleatorio
+    const size = Math.random() * 280 + 70;
+    img.style.width = size + "px";
+    img.style.height = size + "px";
+
+    document.body.appendChild(img);
+
+    // Posición inicial
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+
+    // Velocidad real: píxeles por frame (entre 0.5 y 3)
+    const velocidad = Math.random() * 2.5 + 0.5;
+
+    function seguir() {
+      const dx = mouseX - x;
+      const dy = mouseY - y;
+      const distancia = Math.sqrt(dx * dx + dy * dy);
+
+      if (distancia > 1) {
+        // Movimiento lento con dirección
+        const pasoX = (dx / distancia) * velocidad;
+        const pasoY = (dy / distancia) * velocidad;
+        x += pasoX;
+        y += pasoY;
+      }
+
+      img.style.transform = `translate(${x}px, ${y}px)`;
+      requestAnimationFrame(seguir);
+    }
+
+    seguir();
+  });
+</script>
+
+</body>
+</html>
